@@ -48,9 +48,11 @@ describe 'ProjectBacker' do
 end
 
 describe 'Backer - #back_project' do
+  #it 'returns an array of projects that associated with this Backer intance' do
   it 'is an instance method that accepts a project as an argument and creates a ProjectBacker, associating the project with this backer' do
     ProjectBacker.class_variable_set(:@@all, [])
     spencer = Backer.new('Spencer')
+   # book = Project.new('Ruby, Ruby, and More Ruby')
     magic = Project.new('Magic The Gathering Thing')
 
     # If we are calling this method in this way, what type of argument is it taking?
@@ -62,6 +64,8 @@ describe 'Backer - #back_project' do
 end
 
 describe 'Project - #add_backer' do
+#it 'returns an array of projects that associated with this Backer intance' do
+
   it 'is an instance method that accepts a backer as an argument and creates a ProjectBacker, associating the backer with this project' do
     ProjectBacker.class_variable_set(:@@all, [])
     book = Project.new('Ruby, Ruby, and More Ruby')
